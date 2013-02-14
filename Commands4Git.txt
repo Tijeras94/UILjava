@@ -1,13 +1,12 @@
 These are some sample commands for using git:
 
+to add:
 git clone github_url local_directory
-
 git add file_path
-
 git add .
-
 git commit
-
 git push
 
-
+to delete:
+git add . -A 
+git commit -m "removed some files"
