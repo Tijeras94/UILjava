@@ -2,8 +2,19 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
+
 public class Count 
 {
+	public int x;
+	
+	public static long factorial(long n)
+	{
+		if (n == 0)
+		{
+			return 1;
+		}
+		return n*factorial(n-1);
+	}
 	public static void main(String args[]) throws IOException
 	{
 		Scanner kb = new Scanner (new File("count.dat"));
@@ -14,20 +25,28 @@ public class Count
 		{
 			String temp = kb.nextLine().trim();
 
-			int n = Integer.parseInt(temp.substring(0,2));
-			int r = Integer.parseInt(temp.substring(3));
-
+			long y = Long.parseLong(temp.substring(0,2));
+			long z = Long.parseLong(temp.substring(3));
+			
 			char methd = temp.charAt(2);
 
 			switch (methd)
 			{
 				case 'C':
 					{
-						System.out.println(temp + " This is Combination.");
+						long n = Count.factorial(y);
+						long r = Count.factorial(z);
+						long nr = Count.factorial(n-r);
+						System.out.print(n/(r*(nr)));
+						System.out.println(" This is Combination.");
 					}
 				case 'P':
 					{
-						System.out.println(temp + " This is Permutation.");
+						long n = Count.factorial(y);
+						long r = Count.factorial(z);
+						long nr = Count.factorial(n-r);
+						System.out.print(n/(nr));
+						System.out.println(" This is Permutation.");
 					}
 			}
 		}
