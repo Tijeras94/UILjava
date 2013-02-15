@@ -33,21 +33,37 @@ public class Count
 		{
 			String temp = kb.nextLine().trim();
 
-			long n = Long.parseLong(temp.substring(0,2));
-			long r = Long.parseLong(temp.substring(3));
+			//long n = Long.parseLong(temp.substring(0,2));
+			//long r = Long.parseLong(temp.substring(3));
 			
 			char methd = temp.charAt(2);
-
-			switch (methd)
+			
+	switch (methd)
 			{
 				case 'C':
 					{
+						String [] c = temp.split("C");
+						
+						long n = Long.parseLong(c[0]);
+						long r = Long.parseLong(c[1]);
+						
+						System.out.println(c[0]);
+						System.out.println(c[1]);
+						
 						System.out.print("This is Combination: ");
 						System.out.println(Count.combination(Count.factorial(n), Count.factorial(r), Count.factorial(n-r)));
 						break;
 					}
 				case 'P':
 					{
+						String [] p = temp.split("P");
+						
+						long n = Long.parseLong(p[0]);
+						long r = Long.parseLong(p[1]);
+						
+						System.out.println(p[0]);
+						System.out.println(p[1]);
+						
 						System.out.print("This is Permutation: ");
 						System.out.println(Count.permutation(Count.factorial(n), Count.factorial(n-r)));
 						break;
