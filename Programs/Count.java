@@ -2,14 +2,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-
 public class Count 
-{
-	public int x;
-	
+{	
 	public static long factorial(long n)
 	{
-		if (n == 0)
+		if (n == 1)
 		{
 			return 1;
 		}
@@ -25,8 +22,8 @@ public class Count
 		{
 			String temp = kb.nextLine().trim();
 
-			long y = Long.parseLong(temp.substring(0,2));
-			long z = Long.parseLong(temp.substring(3));
+			long n = Long.parseLong(temp.substring(0,2));
+			long r = Long.parseLong(temp.substring(3));
 			
 			char methd = temp.charAt(2);
 
@@ -34,18 +31,12 @@ public class Count
 			{
 				case 'C':
 					{
-						long n = Count.factorial(y);
-						long r = Count.factorial(z);
-						long nr = Count.factorial(n-r);
-						System.out.print(n/(r*(nr)));
+						System.out.print((Count.factorial(n))/(Count.factorial(r)*Count.factorial(n-r)));
 						System.out.println(" This is Combination.");
 					}
 				case 'P':
 					{
-						long n = Count.factorial(y);
-						long r = Count.factorial(z);
-						long nr = Count.factorial(n-r);
-						System.out.print(n/(nr));
+						System.out.print((Count.factorial(n)/Count.factorial(n-r)));
 						System.out.println(" This is Permutation.");
 					}
 			}
