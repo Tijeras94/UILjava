@@ -18,14 +18,17 @@ public class Count
 			int n = Integer.parseInt(temp.substring(0,2));
 			int r = Integer.parseInt(temp.substring(3));
 			
-			if (temp.charAt(2) == 'C' )
-			{
-				System.out.println(temp);
-			}
-			else if (temp.charAt(2) == 'P')
-			{
-				System.out.println(temp);
-			}
+			char methd = temp.charAt(2);
+			
+			switch (methd)
+				case 'C':
+					{
+						System.out.println(temp + " This is Combination.");
+					}
+				case 'P':
+					{
+						System.out.println(temp + " This is Permutation.");
+					}
 		}
 		kb.close();
 	}
