@@ -33,11 +33,13 @@ public class Count
 					{
 						System.out.print((Count.factorial(n))/(Count.factorial(r)*Count.factorial(n-r)));
 						System.out.println(" This is Combination.");
+						break;
 					}
 				case 'P':
 					{
 						System.out.print((Count.factorial(n)/Count.factorial(n-r)));
 						System.out.println(" This is Permutation.");
+						break;
 					}
 			}
 		}
