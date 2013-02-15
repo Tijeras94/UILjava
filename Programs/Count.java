@@ -12,6 +12,17 @@ public class Count
 		}
 		return n*factorial(n-1);
 	}
+	
+	public static long permutation(long n, long nr)
+	{
+		return n / (nr); 
+	}
+	
+	public static long combination(long n, long r, long nr)
+	{
+		return n / (r*(nr));
+	}
+	
 	public static void main(String args[]) throws IOException
 	{
 		Scanner kb = new Scanner (new File("count.dat"));
@@ -31,14 +42,14 @@ public class Count
 			{
 				case 'C':
 					{
-						System.out.print((Count.factorial(n))/(Count.factorial(r)*Count.factorial(n-r)));
-						System.out.println(" This is Combination.");
+						System.out.print("This is Combination: ");
+						System.out.println(Count.combination(Count.factorial(n), Count.factorial(r), Count.factorial(n-r)));
 						break;
 					}
 				case 'P':
 					{
-						System.out.print((Count.factorial(n)/Count.factorial(n-r)));
-						System.out.println(" This is Permutation.");
+						System.out.print("This is Permutation: ");
+						System.out.println(Count.permutation(Count.factorial(n), Count.factorial(n-r)));
 						break;
 					}
 			}
