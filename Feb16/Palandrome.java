@@ -15,11 +15,11 @@ public class Palandrome
             {
                 if (temp.equals(word))
                 {
-                    System.out.println("The words are palandrome");
+                    System.out.println("The word is a palandrome");
                 }
                 else
                 {
-                    System.out.println("The words are not palandrome");
+                    System.out.println("The word is not a palandrome");
                 }
             }
         }
